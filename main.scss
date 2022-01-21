@@ -1,6 +1,10 @@
-$color-primary: tomato;
-$color-secondary: cadetblue;
-$color-third: skyblue;
+$tomato: tomato;
+$cadetblue: cadetblue;
+$skyblue : skyblue;
+
+$color-primary: $tomato;
+$color-secondary: $cadetblue;
+$color-third: $skyblue;
 
 $url-images: "/assets/images/";
 $w: 200px;
