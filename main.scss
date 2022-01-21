@@ -33,6 +33,22 @@ $w: 200px;
     }
 }
 
+@mixin var($w, $h, $bg...){
+    width: $w;
+    height: $h;
+    background: $bg;
+}
+
+.box2 {
+    @include var(
+        100px, 
+        200px, 
+        url($url-images + "a.jpg") no-repeat 10px 20px,
+        url($url-images + "b.jpg") no-repeat,
+        url($url-images + "c.jpg")
+        );
+}
+
 .box1 {
     @include large-text;
 }
