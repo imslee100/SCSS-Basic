@@ -9,6 +9,13 @@ $color-third: $skyblue;
 $url-images: "/assets/images/";
 $w: 200px;
 
+.item {
+    display: block;
+    @if ($w > 100px and $w < 900px){
+        width: 400px;
+    }
+}
+
 .box {
     width: $w;
     margin-left: $w;
