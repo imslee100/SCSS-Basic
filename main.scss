@@ -12,11 +12,14 @@ $w: 200px;
 .box {
     width: $w;
     margin-left: $w;
+    $color: #111 !global;
+    $color-primary : red !default;
     background: $color-primary url($url-images + "bg.jpg");
 }
 
 .container {
     $size: 100px;
+    background-color: $color;
     .item {
         width: $size;
         height: $size;
