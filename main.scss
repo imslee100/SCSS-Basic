@@ -9,15 +9,43 @@ $color-third: $skyblue;
 $url-images: "/assets/images/";
 $w: 200px;
 
+@mixin size ($w: 100px, $h: 100px){
+    width: $w;
+    height: $h;
+}
+
+@mixin large-text {
+    font: {
+        size: 22px;
+        weight: bold;
+        family: sans-serif;
+    }
+    color: orange;
+    @include size;
+
+    background: url($url-images + "bg.jpg");
+    &::after {
+        content: "!!";
+    }
+
+    span.icon {
+      color: $color-secondary;
+    }
+}
+
+.box1 {
+    @include large-text;
+}
+
 .item {
-    display: block;
+    background-color: $color-primary;
     @if ($w > 100px and $w < 900px){
-        width: 400px;
+        @include size($h:400px);
     }
 }
 
 .box {
-    width: $w;
+    @include size;
     margin-left: $w;
     $color: #111 !global;
     $color-primary : red !default;
