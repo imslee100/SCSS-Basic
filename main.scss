@@ -18,3 +18,21 @@
         font-size: 18px;
     }
 }
+
+
+.list {
+    $w: 100px;
+    $h: 50px;
+
+    li {
+        width: $w;
+        height: $h;
+        background-color: cadetblue;
+    }
+
+    @at-root .box {
+        width: $w;
+        height: $h;
+        background-color: skyblue;
+    }
+}
