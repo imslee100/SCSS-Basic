@@ -1,9 +1,22 @@
+$color-primary: tomato;
+$color-secondary: cadetblue;
+$color-third: skyblue;
+
+$url-images: "/assets/images/";
+$w: 200px;
+
+.box {
+    width: $w;
+    margin-left: $w;
+    background: $color-primary url($url-images + "bg.jpg");
+}
+
 .container {
     $size: 100px;
     .item {
         width: $size;
         height: $size;
-        background: tomato;
+        background: $color-primary;
     }
 }
 
@@ -27,12 +40,12 @@
     li {
         width: $w;
         height: $h;
-        background-color: cadetblue;
+        background-color: $color-secondary;
     }
 
     @at-root .box {
         width: $w;
         height: $h;
-        background-color: skyblue;
+        background-color: $color-third;
     }
 }
